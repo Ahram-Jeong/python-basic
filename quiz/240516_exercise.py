@@ -19,7 +19,6 @@
 # print(lst)
 # print(sample(lst, 1))
 
-
 from random import *
 users = range(1, 21) # 1 ~ 20까지 난수 생성
 # print(type(users))
