@@ -17,29 +17,52 @@ print("==========================================")
 print("======                              ======")
 print("======                              ======")
 
-coin = int(input("insert coin!! >> "))
-left = coin
+# coin = int(input("insert coin!! >> "))
+# left = coin
+#
+# if coin < 600 :
+#     print("insert more coin;-(")
+# else :
+#     menu = int(input("press the menu >> "))
+#     if menu == 1 :
+#         if coin >= 600 :
+#             left = coin - 600
+#         else :
+#             print("금액 부족")
+#     elif menu == 2 :
+#         if coin >= 800 :
+#             left = coin - 800
+#         else :
+#             print("금액 부족")
+#     elif menu == 3 :
+#         if coin >= 1000 :
+#             left = coin - 1000
+#         else :
+#             print("금액 부족")
+#     else :
+#         print("잘못된 메뉴")
+#
+# print(f"잔돈 : 1,000원 {int(left//1000)}개, 500원 {int(left%1000/500)}개, 100원 {int(left%1000%500/100)}개")
 
-if coin < 600 :
-    print("insert more coin;-(")
-else :
+coin = int(input("insert coin!! >> "))
+
+if coin >= 600 :
     menu = int(input("press the menu >> "))
     if menu == 1 :
-        if coin >= 600 :
-            left = coin - 600
-        else :
-            print("금액 부족")
+        coin -= 600
     elif menu == 2 :
         if coin >= 800 :
-            left = coin - 800
+            coin -= 800
         else :
             print("금액 부족")
     elif menu == 3 :
         if coin >= 1000 :
-            left = coin - 1000
+            coin -= 1000
         else :
             print("금액 부족")
     else :
         print("잘못된 메뉴")
+else :
+    print("insert more coin;-(")
 
-print(f"잔돈 : 1,000원 {int(left//1000)}개, 500원 {int(left%1000/500)}개, 100원 {int(left%1000%500/100)}개")
+print(f"잔돈 : 1,000원 {int(coin//1000)}개, 500원 {int(coin%1000//500)}개, 100원 {int(coin%1000%500//100)}개")
