@@ -1,15 +1,16 @@
+# 일반 유닛
 class Unit :
-    def __init__(self, name, hp, damage) :
+    def __init__(self, name, hp) :
         self.name = name
         self.hp = hp
-        self.damage = damage
-        print(f"{self.name} 유닛이 생성되었습니다.")
-        print(f"체력 : {self.hp}, 공격력 : {self.damage}")
+        # self.damage = damage
+        # print(f"{self.name} 유닛이 생성되었습니다.")
+        # print(f"체력 : {self.hp}, 공격력 : {self.damage}")
 
-class AttackUnit :
+# 공격 유닛
+class AttackUnit(Unit) :
     def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
+        Unit.__init__(self, name, hp)
         self.damage = damage
 
     def attack(self, location) :
