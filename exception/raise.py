@@ -14,6 +14,8 @@ try :
     print(f"{num1} / {num2} = {num1 / num2}")
 except ValueError :
     print("잘못된 값 입력! 한 자리 정수만 입력하세요.")
-except BigNumberError as e:
+except BigNumberError as e :
     print("Error!")
     print(e)
+finally : # 무조건 실행되는 코드
+    print("See you again!")
