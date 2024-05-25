@@ -47,7 +47,9 @@ class FlyableAttackUnit(AttackUnit, Flyable) :
 
 class BuildingUnit(Unit) :
     def __init__(self, name, hp, location) :
-        pass
+        # Unit.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0) # super를 통해 메소드 호출 시, param에 self 제외 가능
+        self.location = location
 
 # 객체 생성
 supply_depot = BuildingUnit("서플라이디팟", 500, "7시")
