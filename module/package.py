@@ -14,6 +14,7 @@
 
 # from 패키지 단위로 import 할 경우, __init__ 파일 내 __all__로 지정된 모듈만 import가 가능
 from travel import *
-# trip4 = france.FrancePackage()
-trip4 = sweden.SwedenPackage()
+trip4 = france.FrancePackage()
+trip5 = sweden.SwedenPackage()
 trip4.detail()
+trip5.detail()
